@@ -249,7 +249,7 @@ h4{
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.main_box  .right_side .Select_your_plan .boxes_container_shake{
+.boxes_container_shake{
     animation: shake-animation 0.4s ease  infinite;
     transform-origin: 50% 50%;
 }
@@ -272,7 +272,10 @@ h4{
     align-items: flex-start;
     user-select: none;
 }
-.main_box .right_side .Select_your_plan .boxs_container .box_shake{
+.box_shake{
+    border: 2px solid var(--Strawberry-red);
+}
+.main_box .right_side .box .box_shake{
     border: 2px solid var(--Strawberry-red);
 }
 .main_box .right_side .Select_your_plan .boxs_container .box .text_box h4:nth-child(2){
