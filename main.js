@@ -95,7 +95,7 @@ function handleSections(e) {
 
             if(firstFormData[0].value !== "" && firstFormData[1].value  !== ""  && firstFormData[2].value !== "" ){ 
 
-                // if(nameForm.test(firstFormData[0].value) && emailForm.test(firstFormData[1].value) && numberForm.test(firstFormData[2].value)) {
+                if(nameForm.test(firstFormData[0].value) && emailForm.test(firstFormData[1].value) && numberForm.test(firstFormData[2].value)) {
                     
                     allSections.forEach(element => {
                         element.style.display = "none";
@@ -109,35 +109,39 @@ function handleSections(e) {
                         spans[e - 1].classList = "on"
                     });
 
-                // } else {
+                    // nextButton.onclick = (e) => {
+                    //     e.preventDefault()
+                    // }
+                    // console.log(curentSectionsNum)
 
-                //     curentSectionsNum--
-                // }
+                } else {
+
+                    curentSectionsNum--
+                }
 
             } else{
 
-                document.querySelectorAll(".main_box .right_side .Personal_info .box").forEach(element => {
-                    element.classList.add("boxes_container_shake")
-                    });
-                    document.querySelectorAll(".main_box .right_side .Personal_info .box input").forEach(element => {
-                        element.classList.add("box_shake")
-                    });
-                    let seconds = 0.4
-                    let countdown = setInterval(function () {
+                // document.querySelectorAll(".main_box .right_side .Personal_info .box").forEach(element => {
+                //     element.classList.add("boxes_container_shake")
+                //     });
+                //     document.querySelectorAll(".main_box .right_side .Personal_info .box input").forEach(element => {
+                //         element.classList.add("box_shake")
+                //     });
+                //     let seconds = 0.4
+                //     let countdown = setInterval(function () {
     
-                    if(--seconds > 1){
-                        } else {
-                            seconds--
-                            document.querySelectorAll(".main_box .right_side .Personal_info .box").forEach(element => {
-                                element.classList.remove("boxes_container_shake")
-                            });
-                            document.querySelectorAll(".main_box .right_side .Personal_info .box input").forEach(element => {
-                                element.classList.remove("box_shake")
-                            });
-                            clearInterval(countdown)
-                        }
-                    }, 400);
-
+                //     if(--seconds > 1){
+                //         } else {
+                //             seconds--
+                //             document.querySelectorAll(".main_box .right_side .Personal_info .box").forEach(element => {
+                //                 element.classList.remove("boxes_container_shake")
+                //             });
+                //             document.querySelectorAll(".main_box .right_side .Personal_info .box input").forEach(element => {
+                //                 element.classList.remove("box_shake")
+                //             });
+                //             clearInterval(countdown)
+                //         }
+                //     }, 400);
 
                 curentSectionsNum--
 
@@ -151,6 +155,21 @@ function handleSections(e) {
                         reqtext[0].style.display = "block"
                     });
                     
+            
+                        firstFormData[0].classList.add("boxes_container_shake")
+                        firstFormData[0].classList.add("box_shake")
+                    let seconds = 0.4
+                    let countdown = setInterval(function () {
+    
+                    if(--seconds > 1){
+                        } else {
+                            seconds--
+                                firstFormData[0].classList.remove("boxes_container_shake")
+                                firstFormData[0].classList.remove("box_shake")
+                            clearInterval(countdown)
+                        }
+                    }, 400);
+
                 } 
 
                 if(firstFormData[1].value  === ""){
@@ -161,6 +180,21 @@ function handleSections(e) {
                     reqtext.forEach(element => {
                         reqtext[1].style.display = "block"
                     });
+
+                    firstFormData[1].classList.add("boxes_container_shake")
+                        firstFormData[1].classList.add("box_shake")
+                    let seconds = 0.4
+                    let countdown = setInterval(function () {
+    
+                    if(--seconds > 1){
+                        } else {
+                            seconds--
+
+                            firstFormData[1].classList.remove("boxes_container_shake")
+                                firstFormData[1].classList.remove("box_shake")
+                            clearInterval(countdown)
+                        }
+                    }, 400);
 
                 } 
 
@@ -174,6 +208,23 @@ function handleSections(e) {
                         // element.style.display = "none"
                         reqtext[2].style.display = "block"
                     });
+
+
+                    firstFormData[2].classList.add("boxes_container_shake")
+                    firstFormData[2].classList.add("box_shake")
+                    let seconds = 0.4
+                    let countdown = setInterval(function () {
+    
+                    if(--seconds > 1){
+                        } else {
+                            seconds--
+
+                            firstFormData[2].classList.remove("boxes_container_shake")
+                                firstFormData[2].classList.remove("box_shake")
+                            clearInterval(countdown)
+                        }
+                    }, 400);
+
                 }
         }
 
@@ -282,7 +333,7 @@ function handleSections(e) {
 
         element.onkeyup = function test(e)  {
 
-            // if target inpu in impty do this
+            // if target input in impty do this
             if(e.target.value === ""){
 
                 if(e.target === firstFormData[0]){
@@ -341,10 +392,12 @@ function handleSections(e) {
                                         formTestAlarm.forEach(element => {
                                             formTestAlarm[0].style.display = "none"
                                         });
+                                        firstFormData[0].classList.remove("box_shake")
                                     } else{
                                         formTestAlarm.forEach(element => {
                                             formTestAlarm[0].style.display = "block"
                                         });
+                                        firstFormData[0].classList.add("box_shake")
                                     }
                                 }
                         }
@@ -365,10 +418,12 @@ function handleSections(e) {
                             formTestAlarm.forEach(element => {
                                 formTestAlarm[1].style.display = "none"
                             });
+                            firstFormData[1].classList.remove("box_shake")
                         } else{
                             formTestAlarm.forEach(element => {
                                 formTestAlarm[1].style.display = "block"
                             });
+                            firstFormData[1].classList.add("box_shake")
                         }
                     }
                 }
@@ -389,10 +444,12 @@ function handleSections(e) {
                             formTestAlarm.forEach(element => {
                                 formTestAlarm[2].style.display = "none"
                             });
+                            firstFormData[2].classList.remove("box_shake")
                         } else{
                             formTestAlarm.forEach(element => {
                                 formTestAlarm[2].style.display = "block"
                             });
+                            firstFormData[2].classList.add("box_shake")
                         }
                     }
                 }
