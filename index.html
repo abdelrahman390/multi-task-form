@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Multi-step form</title>
+</head>
+<body>
+  <div class="phone_backgrond"><img src="assets/images/bg-sidebar-mobile.png" alt=""></div>
+
+<div class="max_width">
+  <div class="main_box">
+      <div class="lift_side">
+      <div class="container">
+            <div class="box">
+              <span class="on">1</span>
+              <div class="text">
+                <h4>step 1</h4>
+                <h3>Your info</h3>
+              </div>
+            </div>
+            <div class="box">
+              <span>2</span>
+              <div class="text">
+                <h4>step 2</h4>
+                <h3>Select plan</h3>
+              </div>
+            </div>
+            <div class="box">
+              <span>3</span>
+              <div class="text">
+                <h4>step 3</h4>
+                <h3>Add-ons</h3>
+              </div>
+            </div>
+            <div class="box">
+              <span>4</span>
+              <div class="text">
+                <h4>step 4</h4>
+                <h3>Summary</h3>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="right_side">
+
+        <div class="Personal_info">
+          <div class="header">
+            <h1>Personal info</h1>
+            <h4>Please provide your name, email address, and phone number.</h4>
+          </div>
+          <div class="box">
+            <div class="textAndWarning">
+              <h4>Name</h4>
+              <span>Name must not contain numbers</span>
+              <h4 class="req">this field is required</h4>
+            </div>
+            <input class="" data-name="Name" type="text" placeholder="e.g. Stephen King">
+          </div>
+          <div class="box">
+            <div class="textAndWarning">
+              <h4>Email Address</h4>
+              <span>Email not valid</span>
+              <h4 class="req">this field is required</h4>
+            </div>
+            <input class="" data-name="Email" type="text" placeholder="e.g. stephenking@lorem.com">
+          </div>
+          <div class="box">
+            <div class="textAndWarning">
+              <h4>Phone Number</h4>
+              <span>Please inter egyption right number</span>
+              <h4 class="req">this field is required</h4>
+            </div>
+            <input data-name="Phone" type="text" placeholder="e.g. 01000000000">
+          </div>
+        </div>
+
+        <div class="Select_your_plan">
+          <div class="header">  
+            <h1>Select your plan</h1>
+            <h4>You have the option of monthly or yearly billing.</h4>
+          </div>
+          <div class="boxs_container">
+
+            <div class="box" data-check="" data-name="arcade" data-price="$9/mo" data-year="$90/yr" data-month="$9/mo" data-duration="month" data-select="yes">
+            <img src="assets/images/icon-arcade.svg" alt="arcade">
+              <div class="text_box">
+                <h3>Arcade</h3>
+                <h4 data-year="$90/yr" data-monthly="$9/mo">$9/mo</h4>
+                <h4>2 months free</h4>
+              </div>
+            </div>
+
+            <div class="box" data-check="" data-name="Advanced" data-price="$12/mo" data-year="$120/yr" data-month="$12/mo" data-duration="month" data-select="yes">
+              <img src="assets/images/icon-advanced.svg" alt="advanced">
+              <div class="text_box">
+                <h3>Advanced</h3>
+                <h4 data-year="$120/yr" data-month="$12/mo">$12/mo</h4>
+                <h4>2 months free</h4>
+              </div>
+            </div>
+
+            <div class="box" data-check="" data-name="Pro" data-price="$15/mo" data-year="$150/yr" data-month="$15/mo" data-duration="month" data-select="yes">
+              <img src="assets/images/icon-pro.svg" alt="pro">
+              <div class="text_box">
+                <h3>Pro</h3>
+                <h4 data-year="$150/yr" data-month="$15/mo">$15/mo</h4>
+                <h4>2 months free</h4>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="togleSwitch">
+            <h4 style="font-weight: 600; transition: all 0.4s ease 0s; color: var(--Marine-blue)">Monthly</h4>
+            <input type="checkbox" id="check">
+            <label for="check" class="button"></label>
+            <h4>Yearly</h4>
+        </div>
+
+        </div>
+
+        <div class="Pick_add_ons">
+            <div class="header">  
+              <h1>Pick add-ons</h1>
+              <h4>Add-ons help enhance your gaming experience.</h4>
+            </div>
+
+            <div class="check_box" data-name="Online service" data-month="+$1/mo" data-year="+$10/yr">
+              <div class="lift_cont">
+                <input type="checkbox" id="service">
+                <div for="service"><h3>Online service</h3><h4>Access to multiplayer games</h4></div>
+              </div>
+              <div class="right_cont"><h4 data-month="+$1/mo" data-year="+$10/yr">+$1/mo</h4></div>
+            </div>
+            
+            <div class="check_box" data-name="Larger storage" data-month="+$2/mo" data-year="+$20/yr">
+              <div class="lift_cont">
+                <input type="checkbox" id="storage">
+                <div for="storage"><h3>Larger storage</h3><h4>Extra 1TB of cloud save</h4></div>
+              </div>
+              <div class="right_cont"><h4 data-month="+$2/mo" data-year="+$20/yr">+$2/mo</h4></div>
+            </div>
+
+            <div class="check_box" data-name="Customizable Profile" data-month="+$2/mo" data-year="+$20/yr"> 
+              <div class="lift_cont">
+                <input type="checkbox" id="Profile">
+                <div for="Profile"><h3>Customizable Profile</h3><h4>Custom theme on your profile</h4></div>
+              </div>
+              <div class="right_cont"><h4 data-month="+$2/mo" data-year="+$2o/yr">+$2/mo</h4></div>
+            </div>
+        
+        </div>
+
+        <div class="Finishing_up">
+          <div class="header">  
+            <h1>Finishing up</h1>
+            <h4>Double-check everything looks OK before confirming.</h4>
+          </div>
+          <div class="content_box">
+            <div class="upper_box">
+              <div class="upper_con">
+                <div class="lift">
+                  <h4>Arcade (Monthly)</h4>
+                  <h4 class="right">$9/mo</h4>
+                </div>
+                <a href="">change</a>
+
+              </div>
+              <div class="buttom_con">
+
+              </div>
+            </div>
+            <div class="buttom_box">
+              <h4></h4>
+              <h3>+$12/mo</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="Thank_you">
+          <img src="assets/images/icon-thank-you.svg" alt="thank-you">
+          <h1>Thank you!</h1>
+          <h4>Thanks for confirming your subscription! We hope you have fun
+            using our platform. If you ever need support, please feel free
+            to email us at support@loremgaming.com.</h4>
+        </div>
+
+        <button class="lift" type="button" id="lift">Go Back</button>
+        <button class="right" type="button" id="right">Next Step</button>
+        <button class="right" type="button" id="right_sec">Confirm</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="buttom_background"></div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abdelrahman Walid</a>.
+  </div> -->
+  <script src="main.js"></script>
+</body>
+</html>
