@@ -21,7 +21,8 @@ fourthSectionExtraOPtionsLeft = document.querySelector(".main_box .right_side .F
 fourthSectionExtraOPtionsRight = document.querySelector(".main_box .right_side .Finishing_up .content_box .upper_box .buttom_con .extraAdds:last-child"),
 fourthSectionExtraMainContainer = document.querySelector(".main_box  .right_side .Finishing_up .content_box .upper_box .buttom_con"),
 fourthSectionFinalDuration = document.querySelector(".main_box .right_side .Finishing_up .content_box .buttom_box h4:first-child"),
-fourthSectionFinalPrice = document.querySelector(".main_box .right_side .Finishing_up .content_box .buttom_box h3");
+fourthSectionFinalPrice = document.querySelector(".main_box .right_side .Finishing_up .content_box .buttom_box h3"),
+changMainPlanBotton = document.querySelector(".main_box .right_side .Finishing_up .content_box .upper_box .upper_con a");
 
 
 let YearlySubscribe = document.querySelector(".togleSwitch h4:last-child"),
@@ -92,28 +93,51 @@ function handleSections(e) {
                 element.style.display = "none"
             });
 
-            // || firstFormData[1].value  !== "" || firstFormData[3].value !== "" 
             if(firstFormData[0].value !== "" && firstFormData[1].value  !== ""  && firstFormData[2].value !== "" ){ 
 
-    // if(nameForm.test(firstFormData[0].value) && emailForm.test(firstFormData[1].value) && numberForm.test(firstFormData[2].value)) {
-        
-        allSections.forEach(element => {
-            element.style.display = "none";
-        });
+                // if(nameForm.test(firstFormData[0].value) && emailForm.test(firstFormData[1].value) && numberForm.test(firstFormData[2].value)) {
+                    
+                    allSections.forEach(element => {
+                        element.style.display = "none";
+                    });
 
-        secondSection.style.display = "block";
-        previosButton.style.display = "block"
+                    secondSection.style.display = "block";
+                    previosButton.style.display = "block"
 
-        spans.forEach(ele => {
-            ele.classList = ""
-            spans[e - 1].classList = "on"
-        });
+                    spans.forEach(ele => {
+                        ele.classList = ""
+                        spans[e - 1].classList = "on"
+                    });
 
-    // } else {
-    //     curentSectionsNum--
-    // }
+                // } else {
 
-        } else{
+                //     curentSectionsNum--
+                // }
+
+            } else{
+
+                document.querySelectorAll(".main_box .right_side .Personal_info .box").forEach(element => {
+                    element.classList.add("boxes_container_shake")
+                    });
+                    document.querySelectorAll(".main_box .right_side .Personal_info .box input").forEach(element => {
+                        element.classList.add("box_shake")
+                    });
+                    let seconds = 0.4
+                    let countdown = setInterval(function () {
+    
+                    if(--seconds > 1){
+                        } else {
+                            seconds--
+                            document.querySelectorAll(".main_box .right_side .Personal_info .box").forEach(element => {
+                                element.classList.remove("boxes_container_shake")
+                            });
+                            document.querySelectorAll(".main_box .right_side .Personal_info .box input").forEach(element => {
+                                element.classList.remove("box_shake")
+                            });
+                            clearInterval(countdown)
+                        }
+                    }, 400);
+
 
                 curentSectionsNum--
 
@@ -126,6 +150,7 @@ function handleSections(e) {
                     reqtext.forEach(element => {
                         reqtext[0].style.display = "block"
                     });
+                    
                 } 
 
                 if(firstFormData[1].value  === ""){
@@ -615,6 +640,11 @@ function handleSections(e) {
                 break;
 
         }
+    }
+
+    changMainPlanBotton.onclick = () => {
+        previosButton.onclick()
+        previosButton.onclick()
     }
 
 
